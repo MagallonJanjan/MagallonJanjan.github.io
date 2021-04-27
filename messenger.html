@@ -11,45 +11,92 @@
     />
   </head>
   <body>
-        <nav class="navbar navbar-expand-md navbar-dark fixed-top bg-info">
-                <a class="navbar-brand text-dark" href="#">PassFast</a>
-                <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarCollapse" aria-controls="navbarCollapse" aria-expanded="false" aria-label="Toggle navigation">
-                  <span class="navbar-toggler-icon"></span>
-                </button>
-                <div class="collapse navbar-collapse" id="navbarCollapse">
-                  <ul class="navbar-nav mr-auto">
-                    <li class="nav-item active">
-                      <a class="nav-link text-dark" href="#">Home <span class="sr-only">(current)</span></a>
-                    </li>
-                    <li class="nav-item">
-                      <a class="nav-link text-dark" href="#">About</a>
-                    </li>
-                    <li class="nav-item">
-                      <a class="nav-link disabled text-dark" href="#">Contact</a>
-                    </li>
-                  </ul>
-                  <form class="form-inline mt-2 mt-md-0">
-                    <input class="form-control mr-sm-2" type="text" placeholder="Search" aria-label="Search">
-                    <button class="btn btn-success my-2 my-sm-0" type="submit">Search</button>
-                  </form>
-                </div>
-              </nav>
-                <br><br><br>
-              <main role="main" class="container mt-4">
-                <div class="jumbotron">
-                  <h1>Messenger Integration</h1>
-                  <p class="lead">This example is a quick exercise to illustrate how fixed to top navbar works. As you scroll, it will remain fixed to the top of your browser's viewport.</p>
-                  <a class="btn btn-lg btn-primary" href="../../components/navbar/" role="button">Register</a>
-                </div>
-              </main>
+    <nav class="navbar navbar-expand-md navbar-dark fixed-top bg-info">
+      <a class="navbar-brand text-dark" href="#">Magallon</a>
+      <button
+        class="navbar-toggler"
+        type="button"
+        data-toggle="collapse"
+        data-target="#navbarCollapse"
+        aria-controls="navbarCollapse"
+        aria-expanded="false"
+        aria-label="Toggle navigation"
+      >
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarCollapse">
+        <ul class="navbar-nav mr-auto">
+          <li class="nav-item active">
+            <a class="nav-link text-dark" href="#"
+              >Home <span class="sr-only">(current)</span></a
+            >
+          </li>
+          <li class="nav-item">
+            <a class="nav-link text-dark" href="#">About</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link disabled text-dark" href="#">Contact</a>
+          </li>
+        </ul>
+        <form class="form-inline mt-2 mt-md-0">
+          <input
+            class="form-control mr-sm-2"
+            type="text"
+            placeholder="Search"
+            aria-label="Search"
+          />
+          <button class="btn btn-success my-2 my-sm-0" type="submit">
+            Search
+          </button>
+        </form>
+      </div>
+    </nav>
+    <br /><br /><br />
+    <main role="main" class="container mt-4">
+      <div class="jumbotron">
+        <h1>Messenger Integration</h1>
+        <p class="lead">
+          This example is a quick exercise to illustrate how fixed to top navbar
+          works. As you scroll, it will remain fixed to the top of your
+          browser's viewport.
+        </p>
+        <a
+          class="btn btn-lg btn-primary"
+          role="button"
+          >Register</a
+        >
+      </div>
+    </main>
 
+    <!-- Load Facebook SDK for JavaScript -->
+    <div id="fb-root"></div>
+    <script>
+      window.fbAsyncInit = function() {
+        FB.init({
+          xfbml: true,
+          version: "v10.0"
+        });
+      };
 
+      (function(d, s, id) {
+        var js,
+          fjs = d.getElementsByTagName(s)[0];
+        if (d.getElementById(id)) return;
+        js = d.createElement(s);
+        js.id = id;
+        js.src = "https://connect.facebook.net/en_US/sdk/xfbml.customerchat.js";
+        fjs.parentNode.insertBefore(js, fjs);
+      })(document, "script", "facebook-jssdk");
+    </script>
 
+    <!-- Your Chat Plugin code -->
+    <div
+      class="fb-customerchat"
+      attribution="setup_tool"
+      page_id="101276068781762"
+    ></div>
 
-
-
-    <script
-      src="https://code.jquery.com/jquery-3.2.1.slim.min.js"></script>
+    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"></script>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"></script>
   </body>
